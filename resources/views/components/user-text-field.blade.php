@@ -1,0 +1,19 @@
+<div class="form-group row @error($name) validated @enderror">
+    <div class="col-lg-12">
+        <label class="col-form-label" for="{{ empty($id) ? $name : $id }}">{{ $label }}
+            @if (isset($required) && $required) <span class="text-danger">*</span> @endif
+        </label>
+        <input id="{{ empty($id) ? $name : $id }}" name="{{ $name ?? '' }}" type="{{ $type ?? 'text' }}"
+               class="form-control {{ $class ?? '' }} @error($name) is-invalid @enderror"
+               @if($readOnly) readOnly @endif
+               @if($disabled) disabled @endif
+               placeholder="{{ $placeholder }}"
+               value="{{ $type !== 'password' ? $value : '' }}">
+        @if (isset($helpText)) <span class="form-text text-muted">{{ $helpText }}</span> @endif
+        @error($name)
+        <div class="invalid-feedback">
+            {{ $message }}
+        </div>
+        @enderror
+    </div>
+</div>

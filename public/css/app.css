@@ -1,0 +1,44 @@
+body {
+  font-weight: 400;
+}
+
+th.kt-datatable__cell,
+td.kt-datatable__cell {
+  border-right: 1px solid #ebedf2;
+}
+
+th.kt-datatable__cell:first-child,
+td.kt-datatable__cell:first-child {
+  border-left: 1px solid #ebedf2;
+}
+
+th.kt-datatable__cell {
+  text-align: center;
+  border-top: 1px solid #ebedf2 !important;
+}
+
+td[data-field].right {
+  text-align: right;
+}
+
+td[data-field].center {
+  text-align: center;
+}
+
+.error {
+  color: red !important;
+}
+
+.attach img {
+  margin: 10px 25px 0 25px;
+}
+
+.attach {
+  margin-top: 20px;
+  width: 150px;
+  height: 150px;
+  background-color: #233256d4;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
